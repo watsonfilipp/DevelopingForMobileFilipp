@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "24191FDF60023W",
         "name": "com.DefaultCompany.MobileDevElective",
-        "processId": 24274,
+        "processId": 15957,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -36,6 +36,36 @@
             "deviceId": "24191FDF60023W",
             "name": "com.DefaultCompany.MobileDevElective",
             "processId": 24274,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 9407,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 10265,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 11011,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 14863,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 15957,
             "exited": false
         }
     ],
