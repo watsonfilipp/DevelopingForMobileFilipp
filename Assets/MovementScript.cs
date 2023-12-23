@@ -9,35 +9,35 @@ public class AnimationTrigger : MonoBehaviour
     private bool isGoingRight;
     private bool isGoingLeft;
 
+    private int decimalPlaces = 1; // Number of decimal places to consider
+
     void Start()
     {
-        
-        anim = GetComponent<Animator>(); //Get the Animator component attached to the GameObject
+        anim = GetComponent<Animator>(); // Get the Animator component attached to the GameObject
 
         parentTransform = transform.parent;
 
-        previousXPosition = parentTransform.position.x; //Understanding the previous X position
+        previousXPosition = RoundToDecimal(parentTransform.position.x, decimalPlaces); // Understanding the previous X position
     }
 
     void Update()
     {
-        CheckObjectDirection(); //Checking the direction of the movement - in this case x-axis only -1.5 to 1.5
+        CheckObjectDirection(); // Checking the direction of the movement - in this case x-axis only
     }
 
     void CheckObjectDirection()
     {
         float currentXPosition = parentTransform.position.x;
-        
-        if (currentXPosition > previousXPosition)
+        float roundedCurrentXPosition = RoundToDecimal(currentXPosition, decimalPlaces);
+
+        if (roundedCurrentXPosition > previousXPosition)
         {
-            isGoingRight = true; 
-
-            isGoingLeft = false; 
+            isGoingRight = true;
+            isGoingLeft = false;
         }
-        else if (currentXPosition < previousXPosition)
-        {            
+        else if (roundedCurrentXPosition < previousXPosition)
+        {
             isGoingLeft = true;
-
             isGoingRight = false;
         }
         else
@@ -46,13 +46,18 @@ public class AnimationTrigger : MonoBehaviour
             isGoingLeft = false;
         }
 
-        
-        previousXPosition = currentXPosition; //Updating the previous X position for the next frame
+        previousXPosition = roundedCurrentXPosition; // Updating the previous X position for the next frame
 
-        anim.SetBool("GoRight", isGoingRight); 
+        anim.SetBool("GoRight", isGoingRight);
         anim.SetBool("GoLeft", isGoingLeft);
 
-        //Set "Idle" to false when either "GoRight" or "GoLeft" is true
-        anim.SetBool("Idle", !(isGoingRight || isGoingLeft)); 
+        // Set "Idle" to false when either "GoRight" or "GoLeft" is true
+        anim.SetBool("Idle", !(isGoingRight || isGoingLeft));
+    }
+
+    float RoundToDecimal(float value, int decimalPlaces)
+    {
+        float multiplier = Mathf.Pow(100f, decimalPlaces);
+        return Mathf.Round(value * multiplier) / multiplier;
     }
 }

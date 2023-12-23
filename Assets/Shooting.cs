@@ -63,5 +63,17 @@ public class Shooting : MonoBehaviour
             health.TakeDamage(bulletDamage);
         }
     }
+
+    public void DoubleShootingInterval(float multiplier)
+    {
+        shootingInterval *= multiplier;
+        CancelInvoke("Shoot"); // Cancel the previous shooting interval
+        InvokeRepeating("Shoot", 0f, shootingInterval);
+    }
+
+    public void IncreaseDamage(int amount)
+    {
+        bulletDamage += amount;
+    }
 }
 
