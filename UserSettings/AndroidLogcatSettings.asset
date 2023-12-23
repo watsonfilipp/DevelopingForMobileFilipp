@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "24191FDF60023W",
         "name": "com.DefaultCompany.MobileDevElective",
-        "processId": 15957,
+        "processId": 20252,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -66,6 +66,72 @@
             "deviceId": "24191FDF60023W",
             "name": "com.DefaultCompany.MobileDevElective",
             "processId": 15957,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 18431,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 19230,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 19683,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 15668,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 16020,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 16329,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 16890,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 17168,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 17729,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 18111,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 20252,
             "exited": false
         }
     ],
