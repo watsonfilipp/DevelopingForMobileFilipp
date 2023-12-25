@@ -6,7 +6,7 @@ public class Shooting : MonoBehaviour
     public Transform shootingPoint;
     public float bulletSpeed = 10f; 
     public float shootingInterval = 2f; //The interval between shots in seconds
-    public float bulletLifespan = 5f; //Bullet dies overtime
+    public float bulletLifespan = 3f; //Bullet dies overtime
     public int bulletDamage = 1; //The damage amount
    
 
@@ -25,8 +25,8 @@ public class Shooting : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, shootingPoint.position, shootingPoint.rotation);
         Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
         bulletRb.velocity = shootingPoint.forward * bulletSpeed;
+        Destroy(bullet, bulletLifespan);
 
-        
     }
 
     //OnTriggerEnter is called when the Collider other enters the trigger.
@@ -75,5 +75,8 @@ public class Shooting : MonoBehaviour
     {
         bulletDamage += amount;
     }
+
+    
+
 }
 

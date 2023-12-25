@@ -19,7 +19,7 @@ public class Health : MonoBehaviour
         UpdateHealthText();
     }
 
-    // Applying damage to the target
+    //Applying damage to the target
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -32,13 +32,13 @@ public class Health : MonoBehaviour
         UpdateHealthText();
     }
 
-    // Target death method
+    //Target death method
     void Die()
     {
-        Destroy(gameObject); // Could add particles here
+        Destroy(gameObject); //Particles point to apply
     }
 
-    // Destroying the bullet when hitting the target and taking damage
+    //Destroying the bullet when hitting the target and taking damage
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Bullet"))
@@ -49,7 +49,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    // Update the health display on the TextMeshPro element
+    //Update the health display on the TextMeshPro element
     void UpdateHealthText()
     {
         if (healthText != null)

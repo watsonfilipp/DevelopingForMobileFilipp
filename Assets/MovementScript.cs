@@ -9,20 +9,20 @@ public class AnimationTrigger : MonoBehaviour
     private bool isGoingRight;
     private bool isGoingLeft;
 
-    private int decimalPlaces = 1; // Number of decimal places to consider
+    private int decimalPlaces = 1; //Number of decimal places to consider
 
     void Start()
     {
-        anim = GetComponent<Animator>(); // Get the Animator component attached to the GameObject
+        anim = GetComponent<Animator>(); //Get the Animator component attached to the GameObject
 
         parentTransform = transform.parent;
 
-        previousXPosition = RoundToDecimal(parentTransform.position.x, decimalPlaces); // Understanding the previous X position
+        previousXPosition = RoundToDecimal(parentTransform.position.x, decimalPlaces); //Understanding the previous X position
     }
 
     void Update()
     {
-        CheckObjectDirection(); // Checking the direction of the movement - in this case x-axis only
+        CheckObjectDirection(); //Checking the direction of the movement - in this case x-axis only
     }
 
     void CheckObjectDirection()
@@ -46,12 +46,12 @@ public class AnimationTrigger : MonoBehaviour
             isGoingLeft = false;
         }
 
-        previousXPosition = roundedCurrentXPosition; // Updating the previous X position for the next frame
+        previousXPosition = roundedCurrentXPosition; //Updating the previous X position for the next frame
 
         anim.SetBool("GoRight", isGoingRight);
         anim.SetBool("GoLeft", isGoingLeft);
 
-        // Set "Idle" to false when either "GoRight" or "GoLeft" is true
+        //Set "Idle" to false when either "GoRight" or "GoLeft" is true
         anim.SetBool("Idle", !(isGoingRight || isGoingLeft));
     }
 
