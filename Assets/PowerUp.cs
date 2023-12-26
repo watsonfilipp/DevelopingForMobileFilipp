@@ -3,8 +3,8 @@ using UnityEngine;
 public class PowerUp : MonoBehaviour
 {
     public float intervalMultiplier = 2f; //The multiplier to double the shooting interval
+    public int damageMultiplier;
 
-    //OnTriggerEnter is called when the Collider other enters the trigger.
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -20,6 +20,7 @@ public class PowerUp : MonoBehaviour
         if (shootingScript != null)
         {
             shootingScript.DoubleShootingInterval(intervalMultiplier);
+            shootingScript.DoubleDamage(damageMultiplier);
             Destroy(gameObject); //Destroy the power-up prefab after applying the effect
         }
     }

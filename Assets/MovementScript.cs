@@ -54,7 +54,7 @@ public class AnimationTrigger : MonoBehaviour
         //Set "Idle" to false when either "GoRight" or "GoLeft" is true
         anim.SetBool("Idle", !(isGoingRight || isGoingLeft));
     }
-
+    //Rounds to decimals to make animation more logical and not trigger in place as the objects location is always slightly changing
     float RoundToDecimal(float value, int decimalPlaces)
     {
         float multiplier = Mathf.Pow(100f, decimalPlaces);

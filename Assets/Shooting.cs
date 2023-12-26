@@ -4,11 +4,10 @@ public class Shooting : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform shootingPoint;
-    public float bulletSpeed = 10f; 
-    public float shootingInterval = 2f; //The interval between shots in seconds
-    public float bulletLifespan = 3f; //Bullet dies overtime
-    public int bulletDamage = 1; //The damage amount
-   
+    public float bulletSpeed = 10f;
+    public float shootingInterval = 2f; // The interval between shots in seconds
+    public float bulletLifespan = 3f; // Bullet dies over time
+    public int bulletDamage = 5; // The damage amount
 
     void Start()
     {
@@ -17,40 +16,42 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
-        
+        // You can add update logic here if needed
     }
 
     void Shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, shootingPoint.position, shootingPoint.rotation);
+        Bullet bulletScript = bullet.GetComponent<Bullet>();
+
+        // Set bullet damage before shooting
+        if (bulletScript != null)
+        {
+            bulletScript.SetBulletDamage(bulletDamage);
+        }
+
         Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
         bulletRb.velocity = shootingPoint.forward * bulletSpeed;
         Destroy(bullet, bulletLifespan);
-
     }
 
-    //OnTriggerEnter is called when the Collider other enters the trigger.
+    
     void OnTriggerEnter(Collider other)
     {
         HandleCollision(other.gameObject);
     }
 
-    //OnCollisionEnter is called when this collider/rigidbody has begun touching another rigidbody/collider.
+    
     void OnCollisionEnter(Collision collision)
     {
-        
         HandleCollision(collision.gameObject);
-
     }
 
     void HandleCollision(GameObject otherGameObject)
     {
-        
         if (otherGameObject.CompareTag("Target"))
         {
-            DealDamage(otherGameObject);//Apply damage to the target
-
-
+            DealDamage(otherGameObject); // Apply damage to the target
         }
     }
 
@@ -60,6 +61,7 @@ public class Shooting : MonoBehaviour
 
         if (health != null)
         {
+            Debug.Log("Bullet Damage: " + bulletDamage);
             health.TakeDamage(bulletDamage);
         }
     }
@@ -70,13 +72,14 @@ public class Shooting : MonoBehaviour
         CancelInvoke("Shoot"); // Cancel the previous shooting interval
         InvokeRepeating("Shoot", 0f, shootingInterval);
     }
-
+    public void DoubleDamage(int multiplier)
+    {
+        bulletDamage *= multiplier;
+        CancelInvoke("Shoot"); // Cancel the previous shooting interval
+        InvokeRepeating("Shoot", 0f, shootingInterval);
+    }
     public void IncreaseDamage(int amount)
     {
         bulletDamage += amount;
     }
-
-    
-
 }
-

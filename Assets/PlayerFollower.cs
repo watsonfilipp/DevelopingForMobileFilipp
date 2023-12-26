@@ -70,7 +70,7 @@ public class PlayerFollower : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            Destroy(gameObject); //Should make end game condition here
         }
     }
 }

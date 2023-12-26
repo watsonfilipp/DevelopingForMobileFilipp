@@ -697,6 +697,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   healthText: {fileID: 0}
+  shootingScript: {fileID: 7789527855400301355, guid: 0f2f85cbc55a0a646a15cb0404bd82aa,
+    type: 3}
 --- !u!114 &5587182105106518477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,7 +712,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3
-  xOffsetMultiplier: 0.1
   minXPosition: -3
   maxXPosition: 3
   smoothness: 8
