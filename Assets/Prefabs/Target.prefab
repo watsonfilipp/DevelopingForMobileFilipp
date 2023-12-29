@@ -122,8 +122,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healthText: {fileID: 5540355432297417541}
-  shootingScript: {fileID: 7789527855400301355, guid: 0f2f85cbc55a0a646a15cb0404bd82aa,
-    type: 3}
 --- !u!114 &4934942805011552047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d14f527b9d48f4ab9890bbea701875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2
+  movementSpeed: 3
 --- !u!1 &3317933766055841457
 GameObject:
   m_ObjectHideFlags: 0

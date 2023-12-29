@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "24191FDF60023W",
         "name": "com.DefaultCompany.MobileDevElective",
-        "processId": 15546,
+        "processId": 10437,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -234,6 +234,60 @@
             "deviceId": "24191FDF60023W",
             "name": "com.DefaultCompany.MobileDevElective",
             "processId": 15546,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 31730,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 394,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 31002,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 8676,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 9102,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 9409,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 9814,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 10046,
+            "exited": false
+        },
+        {
+            "deviceId": "24191FDF60023W",
+            "name": "com.DefaultCompany.MobileDevElective",
+            "processId": 10437,
             "exited": false
         }
     ],

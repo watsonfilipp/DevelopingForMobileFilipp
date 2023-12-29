@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d14f527b9d48f4ab9890bbea701875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2
+  movementSpeed: 3
 --- !u!114 &7683208324185633316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intervalMultiplier: 0.5
+  damageMultiplier: 0
 --- !u!1 &8413682310828172184
 GameObject:
   m_ObjectHideFlags: 0

@@ -2649,7 +2649,7 @@ MonoBehaviour:
   bulletSpeed: 10
   shootingInterval: 0.2
   bulletLifespan: 3
-  bulletDamage: 2
+  bulletDamage: 1
 --- !u!136 &5111034789851366923
 CapsuleCollider:
   m_ObjectHideFlags: 0
