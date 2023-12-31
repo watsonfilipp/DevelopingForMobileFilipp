@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class Shooting : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class Shooting : MonoBehaviour
     public float bulletLifespan = 3f; // Bullet dies over time
     public int bulletDamage = 5; // The damage amount
 
+    public TextMeshProUGUI damageText; // Reference to the TextMeshProUGUI component for bullet damage
+    public TextMeshProUGUI intervalText; // Reference to the TextMeshProUGUI component for shooting interval
+
     void Start()
     {
         InvokeRepeating("Shoot", 0f, shootingInterval);
@@ -17,6 +21,18 @@ public class Shooting : MonoBehaviour
     void Update()
     {
         // You can add update logic here if needed
+
+        // Update the damage text on the canvas
+        if (damageText != null)
+        {
+            damageText.text = "Bullet Damage: " + bulletDamage;
+        }
+
+        // Update the interval text on the canvas
+        if (intervalText != null)
+        {
+            intervalText.text = "Interval: " + shootingInterval + "sec";
+        }
     }
 
     void Shoot()
@@ -35,13 +51,11 @@ public class Shooting : MonoBehaviour
         Destroy(bullet, bulletLifespan);
     }
 
-    
     void OnTriggerEnter(Collider other)
     {
         HandleCollision(other.gameObject);
     }
 
-    
     void OnCollisionEnter(Collision collision)
     {
         HandleCollision(collision.gameObject);
@@ -71,15 +85,41 @@ public class Shooting : MonoBehaviour
         shootingInterval *= multiplier;
         CancelInvoke("Shoot"); // Cancel the previous shooting interval
         InvokeRepeating("Shoot", 0f, shootingInterval);
+
+        // Update the interval text on the canvas after changing shooting interval
+        if (intervalText != null)
+        {
+            intervalText.text = "Interval: " + shootingInterval + "sec";
+        }
     }
+
     public void DoubleDamage(int multiplier)
     {
         bulletDamage *= multiplier;
         CancelInvoke("Shoot"); // Cancel the previous shooting interval
         InvokeRepeating("Shoot", 0f, shootingInterval);
+
+        // Update the damage text on the canvas after changing bullet damage
+        if (damageText != null)
+        {
+            damageText.text = "Damage: " + bulletDamage;
+        }
+
+        // Update the interval text on the canvas after changing shooting interval
+        if (intervalText != null)
+        {
+            intervalText.text = "Interval: " + shootingInterval + "sec";
+        }
     }
+
     public void IncreaseDamage(int amount)
     {
         bulletDamage += amount;
+
+        // Update the damage text on the canvas after increasing bullet damage
+        if (damageText != null)
+        {
+            damageText.text = "Damage: " + bulletDamage;
+        }
     }
 }

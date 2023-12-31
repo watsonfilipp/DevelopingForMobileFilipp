@@ -23,13 +23,13 @@ public class Health : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Die();
+            Die(); //Target death condition
         }
 
         UpdateHealthText();
     }
 
-    // Target death method
+    //Target death method
     void Die()
     {
         Destroy(gameObject); // Particles point to apply
